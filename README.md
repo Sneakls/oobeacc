@@ -11,4 +11,4 @@ curl -L sneakls.st/oobeacc.cmd -o oobeacc.cmd <br />
 
 <br />
 
-oobeacc.cmd Username (e.g. oobeacc.cmd MyAccount)
+oobeacc.cmd YourUsername
