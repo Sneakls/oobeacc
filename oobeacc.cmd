@@ -13,8 +13,11 @@ net user %~1 /active:yes
 net user %~1 /expires:never
 net user Administrator /active:no
 net user defaultUser0 /delete
-echo Y | REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /va /f
-echo Y | REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v SkipMachineOOBE /t REG_DWORD /d 1 /f
+REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE\ /v "DefaultAccountAction" /f
+REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE\ /v "DefaultAccountSAMName" /f
+REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE\ /v "DefaultAccountSID" /f
+REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE\ /v "LaunchUserOOBE" /f
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v SkipMachineOOBE /t REG_DWORD /d 1 /f
 shutdown /r /t 1
 exit
 
