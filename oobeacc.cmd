@@ -13,8 +13,8 @@ net user %~1 /active:yes
 net user %~1 /expires:never
 net user Administrator /active:no
 net user defaultUser0 /delete
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /va /f
-REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v SkipMachineOOBE /t REG_DWORD /d 1 /f
+echo Y | REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /va /f
+echo Y | REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v SkipMachineOOBE /t REG_DWORD /d 1 /f
 shutdown /r /t 1
 exit
 
