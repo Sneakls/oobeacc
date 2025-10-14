@@ -6,8 +6,6 @@ Press Shift+F10 during Setup<br /><br />
 Use one of the two curl commands:<br />
 <br />
 curl -L https://github.com/Sneakls/oobeacc/raw/refs/heads/main/oobeacc.cmd -o oobeacc.cmd<br />
--OR-<br />
-curl -L sneakls.st/oobeacc.cmd -o oobeacc.cmd <br />
 
 <br />
 Now run the script with the following:<br />
